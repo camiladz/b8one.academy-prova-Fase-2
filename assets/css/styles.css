@@ -1,0 +1,25 @@
+
+
+
+/* header */ 
+
+.header {
+    display: flex;
+    max-width: 100%;
+    height: 64px;
+    align-items: center;
+    justify-content: space-between;
+    background: #142159;
+    Padding: 16px, 32px, 16px, 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    
+}
