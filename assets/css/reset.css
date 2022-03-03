@@ -1,4 +1,4 @@
-/* {
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -11,7 +11,7 @@
 
 body {
   margin: 0;
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: Inter;
 }
 
 html,
@@ -95,13 +95,13 @@ select,
 textarea {
   font-family: inherit;
   font-size: 100%;
-  /*line-height: 1.15;
   margin: 0;
 }
 
 button,
 input {
   overflow: visible;
+  font-family: Inter;
 }
 
 button,
@@ -124,6 +124,10 @@ button::-moz-focus-inner,
   padding: 0;
 }
 
+button {
+  background: none;
+  border: none;
+}
 
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
@@ -207,12 +211,4 @@ ul {
   padding: 0;
   margin: 0;
   list-style: none;
-} */
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+} 
