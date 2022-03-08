@@ -24,10 +24,10 @@ let icon = document.querySelector('.visible__button');
   icon.addEventListener("click", function(){
        if(mostrarSenha.type == 'password'){
            mostrarSenha.type ='text';
-           icon.src = 'assets/images/visible.svg';
+           icon.src = 'assets/images/login/visible.svg';
        } else {
            mostrarSenha.type = 'password';
-           icon.src = 'assets/images/visible-off.svg';
+           icon.src = 'assets/images/login/visible-off.svg';
        }
    })
 

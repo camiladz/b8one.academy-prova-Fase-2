@@ -10,7 +10,6 @@ body {
 .login {
     padding: 48px;
     max-width: 432px;
-    max-height: 500px;
     background: #FFFFFF;
     border-radius: 16px;
 }
@@ -103,7 +102,7 @@ fieldset {
     font-size: 14px;
    line-height: 16px;
    color: #000000;
-   margin-left: 8px;
+   margin-left: 16px;
 }
 
 .login-form__label--senha {
@@ -143,4 +142,35 @@ input:invalid{
   
 input:focus:invalid{
    box-shadow: none;
+}
+
+input[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+  }
+  
+input[type=checkbox]:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -4px;
+    left: 0;
+    background-color: #425DC7;
+    border-radius: 4px;
+}
+  
+input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 8px;
+    border: 1.5px solid #FFFFFF;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0px;
+    left: 8px;
 }
