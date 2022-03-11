@@ -31,14 +31,14 @@
                 <label class="login-form__label">
                     Seu E-mail
                     <div class="login-form__email">
-                        <input class="login-form__input" onblur="validateEmail()" onfocus="changeMessage()" type="email" placeholder="exemplo@email.com" />
+                        <input id="input_email" class="login-form__input"  type="email" placeholder="exemplo@email.com" />
                         <span class="erro"></span>
                     </div>
                 </label>
                 <label class="login-form__label login-form__label--senha">
                     Sua Senha
                     <div class="login-form__password">
-                        <input class="login-form__input login-form__input--pass" type="password" placeholder="Digite sua senha">
+                        <input  id="input_password" class="login-form__input login-form__input--pass" type="password" placeholder="Digite sua senha">
                         <button type="button">
                             <img src="./assets/images/login/visible-off.svg"  alt="" class="visible__button"> 
                         </button>                                
@@ -54,7 +54,7 @@
                 </a>
             </div>
         </fieldset>
-            <button class="login-enter" type="button">
+            <button class="login-enter" >
                 Entrar
             </button>
         </form>

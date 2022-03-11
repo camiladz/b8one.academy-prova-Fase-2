@@ -21,7 +21,7 @@
         <div class="header-container">
             <div class="logo">
                 <span class="logo__icon">ME</span>
-                <span class="logo__text">Minha Empresa</span>
+                <span class="logo__text"></span>
             </div>
             <div class="header__block--right">
                 <div class="user-actions">
@@ -42,6 +42,7 @@
                         </button>
                         <div class="help__menu">
                             <div class="help__container">
+                                <img src="./assets/images/desktop/Vector 1.svg" alt="" class="vetor">
                                 <div class="help__text">
                                     <span class="help__text--black">
                                         Central de Ajuda
@@ -149,7 +150,7 @@
                             </div>
                         </div>
                         <span class="user-actions-profile__name">
-                            Gustavo Silva
+                            
                         </span>
                     </div>
                 </div>
@@ -430,7 +431,7 @@
                                 stroke-linejoin="round" />
                         </svg>
                         <span class="banner-description__text">
-                            🔥 <b> Lançamento</b> 🔥 Nova Ferramenta de Carrinhos Abandonados 😍
+                            🔥 Lançamento 🔥 Nova Ferramenta de Carrinhos Abandonados 😍
                         </span>
                     </div>
                     <button class="banner__button">
@@ -474,6 +475,7 @@
                         Exibindo dados do período <b>1 de novembro à 8 de novembro de 2021</b>
                     </span>
                 </div>
+                <!-- Gráfico de Vendas -->
                 <div class="general__report">
                     <div class="general-report__heading">
                         <div class="general-report__title">
@@ -485,121 +487,191 @@
                         <div class="general-report__tab">
                             <ul class="general-report__list">
                                 <li class="general-report__item">
-                                    <a href="#" class="general-report__link general-report__link--blue">
-                                        Vendas
-                                    </a>
+                                <button class="reportlink active" onclick="openTab(event, 'sales')" >
+                                    Vendas
+                                </button>
                                 </li>
                                 <li class="general-report__item">
-                                    <a href="#" class="general-report__link">
+                                    <button class="reportlink" onclick="openTab(event, 'orders')">
                                         Pedidos
-                                    </a>
+                                    </button>
                                 </li>
                                 <li class="general-report__item">
-                                    <a href="#" class="general-report__link">
+                                    <button class="reportlink" onclick="openTab(event, 'resellers')">
                                         Revendedores
-                                    </a>
+                                    </button>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <hr>
-                    <div class="general-report__cards">
-                        <div class="revenue__card">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="48" height="48" rx="12" fill="#F1F2F9" />
-                                <path
-                                    d="M24 37.3333C31.3638 37.3333 37.3333 31.3638 37.3333 24C37.3333 16.6362 31.3638 10.6667 24 10.6667C16.6362 10.6667 10.6667 16.6362 10.6667 24C10.6667 31.3638 16.6362 37.3333 24 37.3333Z"
-                                    fill="#CDD2EB" stroke="#CDD2EB" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path
-                                    d="M28 18.6667H22.8889C21.2933 18.6667 20 19.8606 20 21.3333C20 22.8061 21.2933 24 22.8889 24H25.1111C26.7067 24 28 25.1938 28 26.6667C28 28.1395 26.7067 29.3333 25.1111 29.3333H20"
-                                    stroke="#425DC7" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M24 16V18.6667" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M24 29.3333L24 32" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                            <div class="revenue-card__title">
-                                <span class="card__title">
-                                    Faturamento
-                                </span>
-                                <span class="card__text">
-                                    R$ 800.803,00
-                                </span>
+                    <!-- Gráfico de Vendas -->
+                    <div class="general-report__sales tabcontent" id="sales">
+                        <div class="general-report__cards">
+                            <div class="revenue__card">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="48" height="48" rx="12" fill="#F1F2F9" />
+                                    <path
+                                        d="M24 37.3333C31.3638 37.3333 37.3333 31.3638 37.3333 24C37.3333 16.6362 31.3638 10.6667 24 10.6667C16.6362 10.6667 10.6667 16.6362 10.6667 24C10.6667 31.3638 16.6362 37.3333 24 37.3333Z"
+                                        fill="#CDD2EB" stroke="#CDD2EB" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M28 18.6667H22.8889C21.2933 18.6667 20 19.8606 20 21.3333C20 22.8061 21.2933 24 22.8889 24H25.1111C26.7067 24 28 25.1938 28 26.6667C28 28.1395 26.7067 29.3333 25.1111 29.3333H20"
+                                        stroke="#425DC7" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M24 16V18.6667" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M24 29.3333L24 32" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <div class="revenue-card__title">
+                                    <span class="card__title">
+                                        Faturamento
+                                    </span>
+                                    <span class="card__text--revenue">
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="sales__card">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="48" height="48" rx="12" fill="#F1F2F9" />
+                                    <path
+                                        d="M24 37.3333C31.3638 37.3333 37.3333 31.3638 37.3333 24C37.3333 16.6362 31.3638 10.6667 24 10.6667C16.6362 10.6667 10.6667 16.6362 10.6667 24C10.6667 31.3638 16.6362 37.3333 24 37.3333Z"
+                                        fill="#CDD2EB" stroke="#CDD2EB" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M28 18.6667H22.8889C21.2933 18.6667 20 19.8606 20 21.3333C20 22.8061 21.2933 24 22.8889 24H25.1111C26.7067 24 28 25.1938 28 26.6667C28 28.1395 26.7067 29.3333 25.1111 29.3333H20"
+                                        stroke="#425DC7" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M24 16V18.6667" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M24 29.3333L24 32" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <div class="sales-card__title">
+                                    <span class="card__title">
+                                        Vendas totais
+                                    </span>
+                                    <span class="card__text--sales">
+                                       
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="ticket__card">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="48" height="48" rx="12" fill="#F1F2F9" />
+                                    <path
+                                        d="M24 37.3333C31.3638 37.3333 37.3333 31.3638 37.3333 24C37.3333 16.6362 31.3638 10.6667 24 10.6667C16.6362 10.6667 10.6667 16.6362 10.6667 24C10.6667 31.3638 16.6362 37.3333 24 37.3333Z"
+                                        fill="#CDD2EB" stroke="#CDD2EB" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M28 18.6667H22.8889C21.2933 18.6667 20 19.8606 20 21.3333C20 22.8061 21.2933 24 22.8889 24H25.1111C26.7067 24 28 25.1938 28 26.6667C28 28.1395 26.7067 29.3333 25.1111 29.3333H20"
+                                        stroke="#425DC7" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M24 16V18.6667" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M24 29.3333L24 32" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <div class="ticket-card__title">
+                                    <span class="card__title">
+                                        Ticket médio
+                                    </span>
+                                    <span class="card__text--ticket">
+                                        
+                                    </span>
+                                </div>
                             </div>
                         </div>
-                        <div class="sales__card">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="48" height="48" rx="12" fill="#F1F2F9" />
-                                <path
-                                    d="M24 37.3333C31.3638 37.3333 37.3333 31.3638 37.3333 24C37.3333 16.6362 31.3638 10.6667 24 10.6667C16.6362 10.6667 10.6667 16.6362 10.6667 24C10.6667 31.3638 16.6362 37.3333 24 37.3333Z"
-                                    fill="#CDD2EB" stroke="#CDD2EB" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path
-                                    d="M28 18.6667H22.8889C21.2933 18.6667 20 19.8606 20 21.3333C20 22.8061 21.2933 24 22.8889 24H25.1111C26.7067 24 28 25.1938 28 26.6667C28 28.1395 26.7067 29.3333 25.1111 29.3333H20"
-                                    stroke="#425DC7" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M24 16V18.6667" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M24 29.3333L24 32" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                            <div class="sales-card__title">
-                                <span class="card__title">
-                                    Vendas totais
-                                </span>
-                                <span class="card__text">
-                                    1830
-                                </span>
+                        <div class="general-report__graph--sales">
+                            <div class="sales-graph">
+                                <canvas id="myChart" width="1084" height="196"></canvas>
+                            </div>
+                            <div class="legend-box">
+                                <button id="blue" onclick="toggleData(0)" class="legend-button">
+                                </button>
+                                <span class="legend-text">Estornado</span>
+    
+                                <button id="red" onclick="toggleData(1)" class="legend-button"></button>
+                                <span class="legend-text">Cancelado</span>
+    
+                                <button id="yellow" onclick="toggleData(2)" class="legend-button"></button>
+                                <span class="legend-text">Não pago</span>
+    
+                                <button id="green" onclick="toggleData(3)" class="legend-button"></button>
+                                <span class="legend-text">Pago</span>
                             </div>
                         </div>
-                        <div class="ticket__card">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="48" height="48" rx="12" fill="#F1F2F9" />
-                                <path
-                                    d="M24 37.3333C31.3638 37.3333 37.3333 31.3638 37.3333 24C37.3333 16.6362 31.3638 10.6667 24 10.6667C16.6362 10.6667 10.6667 16.6362 10.6667 24C10.6667 31.3638 16.6362 37.3333 24 37.3333Z"
-                                    fill="#CDD2EB" stroke="#CDD2EB" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path
-                                    d="M28 18.6667H22.8889C21.2933 18.6667 20 19.8606 20 21.3333C20 22.8061 21.2933 24 22.8889 24H25.1111C26.7067 24 28 25.1938 28 26.6667C28 28.1395 26.7067 29.3333 25.1111 29.3333H20"
-                                    stroke="#425DC7" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M24 16V18.6667" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M24 29.3333L24 32" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                            <div class="ticket-card__title">
-                                <span class="card__title">
-                                    Ticket médio
-                                </span>
-                                <span class="card__text">
-                                    R$ 437,59
-                                </span>
-                            </div>
+                        <div class="general-report__graph--orders">
                         </div>
                     </div>
-                    <div class="general-report__graph">
-                        <div class="grafico">
-                            <canvas id="myChart" width="1084" height="196"></canvas>
-                        </div>
-                        <div class="legend-box">
-                            <button id="blue" onclick="toggleData(0)" class="legend-button">
-                            </button>
-                            <span class="legend-text">Estornado</span>
-                
-                            <button id="red" onclick="toggleData(1)" class="legend-button"></button>
-                            <span class="legend-text">Cancelado</span>
-                
-                            <button id="yellow" onclick="toggleData(2)" class="legend-button"></button>
-                            <span class="legend-text">Não pago</span>
-                
-                            <button id="green" onclick="toggleData(3)" class="legend-button"></button>
-                            <span class="legend-text">Pago</span>
+                    <!-- Gráfico de Pedidos -->
+                    <div class="general-report__orders tabcontent" id="orders">
+                            <div class="general-report__graph--orders">
+                                <div class="orders">
+                                    <canvas id="myChartTwo" width="1084" height="291"></canvas>
+                                </div>
+                                <div class="legend-box">
+                                    <button id="blueTwo" onclick="toggleDataTwo(0)" class="legend-button">
+                                    </button>
+                                    <span class="legend-text">
+                                        Total de Pedidos
+                                    </span>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- Gráfico de Revendedores -->
+                    <div class="general-report__resellers tabcontent" id="resellers">
+                        <div class="report-container">
+                            <div class="general-resellers">
+                                <div class="resellers-button">
+                                    <button class="resellers__showAll">
+                                        <span class="resellers__text resellers__text--gray">
+                                            Mostrar
+                                        </span>
+                                        <span class="resellers__text">
+                                            todos os revendedores
+                                        </span>
+                                        <img src="./assets/images/desktop/dropdown__visibleoff.svg" alt=""
+                                            class="resellers__arrow">
+                                    </button>
+                                </div>
+                                <div class="general-report__graph--resellers">
+                                    <div class="resellers">
+                                        <canvas id="myChartThree" width="680" height="259"></canvas>
+                                    </div>
+                                    <div class="legend-box">
+                                        <button id="blueThree" onclick="toggleDataThree(0)" class="legend-button">
+                                        </button>
+                                        <span class="legend-text">Valor total de vendas</span>
+                                        <button id="greenThree" onclick="toggleDataThree(1)" class="legend-button"></button>
+                                        <span class="legend-text">Quantidade de pedidos</span>
+        
+                                        <button id="redThree" onclick="toggleDataThree(2)" class="legend-button"></button>
+                                        <span class="legend-text">Comissão a pagar</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="general-report__resellers--ranking">
+                                <div class="resellers__ranking">
+                                    <span class="resellers__title">
+                                        Ranking de revendedores
+                                    </span>
+                                    <div class="ranking-position">
+                                        <ul class="position__list">                                        
+                                        </ul>
+                                    </div>
+                                    <div class="position__button">
+                                        <button class="ranking__button">
+                                            Ver todos
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -628,190 +700,12 @@
                         <hr id="insight__line">
                         <div class="insights__product">
                             <ul class="insights-product__list">
-                                <li class="insights-product__item">
-                                    <span class="insights-product__index">
-                                        1
-                                    </span>
-                                    <img src="./assets/images/desktop/product-01.svg" alt="" class="insights-product__image">
-                                    <span class="insights-product__description">
-                                        Computador Gamer Completo Fácil Intel i5 (Terceira Geração) 8GB Placa de Vídeo GT 730 2GB...
-                                    </span>
-                                    <span class="insights-product__sku">
-                                        #912304817412-3
-                                    </span>
-                                    <span class="insights-product__department">
-                                        Eletrônicos
-                                    </span>
-                                    <span class="insights-produtc__price">
-                                        R$ 2.999,00
-                                    </span>
-                                </li>
-                                <li class="insights-product__item">
-                                    <span class="insights-product__index">
-                                        2
-                                    </span>
-                                    <img src="./assets/images/desktop/product-02.svg" alt="" class="insights-product__image">
-                                    <span class="insights-product__description">
-                                        Smartphone Samsung Galaxy S21 FE 128GB 5G Wi-Fi Tela 6.4'' Dual Chip 6GB RAM Câmera Tripla + Selfie 32MP - Preto
-                                    </span>
-                                    <span class="insights-product__sku">
-                                        #912304817412-3
-                                    </span>
-                                    <span class="insights-product__department">
-                                        Smartphones
-                                    </span>
-                                    <span class="insights-produtc__price">
-                                        R$ 2.999,00
-                                    </span>
-                                </li>
-                                <li class="insights-product__item">
-                                    <span class="insights-product__index">
-                                        3
-                                    </span>
-                                    <img src="./assets/images/desktop/product-03.svg" alt="" class="insights-product__image">
-                                    <span class="insights-product__description">
-                                        Pneu Aro 14 175/70R14 Pirelli P400 EVO
-                                    </span>
-                                    <span class="insights-product__sku">
-                                        #912304817412-3
-                                    </span>
-                                    <span class="insights-product__department">
-                                        Auto
-                                    </span>
-                                    <span class="insights-produtc__price">
-                                        R$ 2.999,00
-                                    </span>
-                                </li>
-                                <li class="insights-product__item">
-                                    <span class="insights-product__index">
-                                        4
-                                    </span>
-                                    <img src="./assets/images/desktop/product-04.svg" alt="" class="insights-product__image">
-                                    <span class="insights-product__description">
-                                        Panela De Pressão Elétrica 6l Electrolux Chef Pcc20 - 127v
-                                    </span>
-                                    <span class="insights-product__sku">
-                                        #912304817412-3
-                                    </span>
-                                    <span class="insights-product__department">
-                                        Eletroportáteis
-                                    </span>
-                                    <span class="insights-produtc__price">
-                                        R$ 2.999,00
-                                    </span>
-                                </li>
-                                <li class="insights-product__item">
-                                    <span class="insights-product__index">
-                                        5
-                                    </span>
-                                    <img src="./assets/images/desktop/product-05.svg" alt="" class="insights-product__image">
-                                    <span class="insights-product__description">
-                                        Cafeteira Expresso Nescafé Dolce Gusto Genio S Plus Vermelha - Dgs3
-                                    </span>
-                                    <span class="insights-product__sku">
-                                        #912304817412-3
-                                    </span>
-                                    <span class="insights-product__department">
-                                        Eletroportáteis
-                                    </span>
-                                    <span class="insights-produtc__price">
-                                        R$ 2.999,00
-                                    </span>
-                                </li>
-                                <li class="insights-product__item">
-                                    <span class="insights-product__index">
-                                        6
-                                    </span>
-                                    <img src="./assets/images/desktop/product-06.svg" alt="" class="insights-product__image">
-                                    <span class="insights-product__description">
-                                        Aspirador de Pó e Água WAP GTW 20 Profissional 1600W 20 Litros 160 mbar com Acessórios e Soprador Barril Amarelo - 220V
-                                    </span>
-                                    <span class="insights-product__sku">
-                                        #912304817412-3
-                                    </span>
-                                    <span class="insights-product__department">
-                                        Eletroportáteis
-                                    </span>
-                                    <span class="insights-produtc__price">
-                                        R$ 2.999,00
-                                    </span>
-                                </li>
-                                <li class="insights-product__item">
-                                    <span class="insights-product__index">
-                                        7
-                                    </span>
-                                    <img src="./assets/images/desktop/product-07.svg" alt="" class="insights-product__image">
-                                    <span class="insights-product__description">
-                                        Filtro Purificador e refrigerador de Água Top Life HeOxi (Linha Alcalina Ionizada com Super Ozônio) Prata 127V
-                                    </span>
-                                    <span class="insights-product__sku">
-                                        #912304817412-3
-                                    </span>
-                                    <span class="insights-product__department">
-                                        Eletroportáteis
-                                    </span>
-                                    <span class="insights-produtc__price">
-                                        R$ 2.999,00
-                                    </span>
-                                </li>
-                                <li class="insights-product__item">
-                                    <span class="insights-product__index">
-                                        8
-                                    </span>
-                                    <img src="./assets/images/desktop/product-08.svg" alt="" class="insights-product__image">
-                                    <span class="insights-product__description">
-                                        Apple Watch Series 3 (GPS) 42mm Caixa Cinza Espacial de Alumínio com Pulseira Esportiva Preta
-                                    </span>
-                                    <span class="insights-product__sku">
-                                        #912304817412-3
-                                    </span>
-                                    <span class="insights-product__department">
-                                        Smartphones
-                                    </span>
-                                    <span class="insights-produtc__price">
-                                        R$ 2.999,00
-                                    </span>
-                                </li>
-                                <li class="insights-product__item">
-                                    <span class="insights-product__index">
-                                        9
-                                    </span>
-                                    <img src="./assets/images/desktop/product-09.svg" alt="" class="insights-product__image">
-                                    <span class="insights-product__description">
-                                        Smart TV LED 32" Philco PTV32G52S HD e Áudio Dolby Conversor Digital Integrado 2 HDMI 1 USB Wi-Fi com Netflix
-                                    </span>
-                                    <span class="insights-product__sku">
-                                        #912304817412-3
-                                    </span>
-                                    <span class="insights-product__department">
-                                        Eletrônicos
-                                    </span>
-                                    <span class="insights-produtc__price">
-                                        R$ 2.999,00
-                                    </span>
-                                </li>
-                                <li class="insights-product__item">
-                                    <span class="insights-product__index">
-                                        10
-                                    </span>
-                                    <img src="./assets/images/desktop/product-10.svg" alt="" class="insights-product__image">
-                                    <span class="insights-product__description">
-                                        Secador de Cabelos Mondial Max Travel SC-10 Bivolt
-                                    </span>
-                                    <span class="insights-product__sku">
-                                        #912304817412-3
-                                    </span>
-                                    <span class="insights-product__department">
-                                        Beleza
-                                    </span>
-                                    <span class="insights-produtc__price">
-                                        R$ 2.999,00
-                                    </span>
-                                </li>
+    
+    
                             </ul>
                         </div>
                         <div class="insights__buttons">
-                            <div class="buttons__left">                                
+                            <div class="buttons__left">
                                 <span class="insights-buttons__text">
                                     Exibindo
                                 </span>
@@ -819,7 +713,8 @@
                                     <span class="insights-dropdown__text">
                                         10
                                     </span>
-                                    <img src="./assets/images/desktop/dropdown__visibleoff.svg" alt="" class="insights-dropdown__arrow">
+                                    <img src="./assets/images/desktop/dropdown__visibleoff.svg" alt=""
+                                        class="insights-dropdown__arrow">
                                 </button>
                                 <span class="insights-buttons__text">
                                     produtos por página
@@ -827,7 +722,8 @@
                             </div>
                             <div class="buttons__right">
                                 <button class="swipe__left">
-                                    <img src="./assets/images/desktop/swipe-left-icon.svg" alt="swipe left icon" class="swipe-left__icon">
+                                    <img src="./assets/images/desktop/swipe-left-icon.svg" alt="swipe left icon"
+                                        class="swipe-left__icon">
                                 </button>
                                 <button class="button-page button-page__blue">
                                     1
@@ -839,13 +735,15 @@
                                     3
                                 </button>
                                 <button class="swipe__right">
-                                    <img src="./assets/images/desktop/swipe-right-icon.svg" alt="swipe right icon" class="swipe-right__icon">
+                                    <img src="./assets/images/desktop/swipe-right-icon.svg" alt="swipe right icon"
+                                        class="swipe-right__icon">
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
