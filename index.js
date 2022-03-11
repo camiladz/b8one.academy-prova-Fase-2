@@ -57,11 +57,13 @@ async function fetchResellers() {
 
 }
 
-
 function populateResellers(resellers) {
     const rankingListUl = document.querySelector(".position__list");
     
     const rankingHtmlArray = resellers.map((reseller, position) =>{
+    
+    const isValueNegative = reseller.percentage.split("").find((ele)=> ele === "-")
+    
         return `
         <li class="position__item">
                             <span class="position">
@@ -78,10 +80,10 @@ function populateResellers(resellers) {
                             <span class="position__text--gray">
                                 ${reseller.ordersCount} pedidos
                             </span>
-                            <span class="position__percentage">
+                            <span class="position__percentage ${isValueNegative && "position__percentage--negative"}">
                                 ${reseller.percentage}
-                                <img src="./assets/images/desktop/position__arrow.svg" alt="" class="position__arrow">
-                        </span>
+                                ${isValueNegative ? '<img src="./assets/images/desktop/position__arrow--negative.svg" alt="" class="position__arrow">' : '<img src="./assets/images/desktop/position__arrow.svg" alt="" class="position__arrow">'}
+                            </span>
                 </div>
             </div>
         </li>
@@ -131,13 +133,11 @@ async function populateUser() {
 
     const profileSpan = document.querySelector(".user-actions-profile__name");
     profileSpan.innerHTML = (menuUser.username);
-    
-    
+
+    const profileAvatar = document.querySelector(".user-actions-profile__avatar");
+    profileAvatar.src = (menuUser.photo);
     
 }
-
-
-
 
 async function main() {
 
@@ -169,11 +169,31 @@ main();
 let dropdownOne = document.querySelector('.dropdown-menu__one');
 let icon = document.querySelector('.dropdown__one');
 
+let dropdownTwo = document.querySelector('.dropdown-menu__two');
+let iconTwo = document.querySelector('.dropdown-icon__two');
+
+let dropdownThree = document.querySelector('.dropdown-menu__three');
+let iconThree = document.querySelector('.dropdown-icon__three');
+
+let dropdownFour = document.querySelector('.dropdown-menu__four');
+let iconFour = document.querySelector('.dropdown-icon__four');
+
 
 icon.addEventListener("click", function () {
-    if (dropdownOne.style.display === "none") {
+    console.log(dropdownOne.style.display)
+    if (dropdownOne.style.display === "none" || dropdownOne.style.display === "") {
         dropdownOne.style.display = "flex";
-        icon.src = './assets/images/desktop/dropdown__visible.svg'
+        icon.src = './assets/images/desktop/dropdown__visible.svg' 
+
+        dropdownTwo.style.display = "none";
+        iconTwo.src = './assets/images/desktop/dropdown__visibleoff.svg'
+
+        dropdownThree.style.display = "none";
+        iconThree.src = './assets/images/desktop/dropdown__visibleoff.svg'
+
+        dropdownFour.style.display = "none";
+        iconFour.src = './assets/images/desktop/dropdown__visibleoff.svg'
+
     } else {
         dropdownOne.style.display = "none";
         icon.src = './assets/images/desktop/dropdown__visibleoff.svg'
@@ -181,13 +201,22 @@ icon.addEventListener("click", function () {
 });
 
 
-let dropdownTwo = document.querySelector('.dropdown-menu__two');
-let iconTwo = document.querySelector('.dropdown-icon__two');
+
 
 iconTwo.addEventListener("click", function () {
-    if (dropdownTwo.style.display === "none") {
+    if (dropdownTwo.style.display === "none" || dropdownTwo.style.display === "") {
         dropdownTwo.style.display = "flex";
         iconTwo.src = './assets/images/desktop/dropdown__visible.svg'
+
+        dropdownOne.style.display = "none";
+        icon.src = './assets/images/desktop/dropdown__visibleoff.svg'
+
+        dropdownThree.style.display = "none";
+        iconThree.src = './assets/images/desktop/dropdown__visibleoff.svg'
+
+        dropdownFour.style.display = "none";
+        iconFour.src = './assets/images/desktop/dropdown__visibleoff.svg'
+
     } else {
         dropdownTwo.style.display = "none";
         iconTwo.src = './assets/images/desktop/dropdown__visibleoff.svg'
@@ -195,13 +224,23 @@ iconTwo.addEventListener("click", function () {
 })
 
 
-let dropdownThree = document.querySelector('.dropdown-menu__three');
-let iconThree = document.querySelector('.dropdown-icon__three');
+
 
 iconThree.addEventListener("click", function () {
-    if (dropdownThree.style.display === "none") {
+    if (dropdownThree.style.display === "none" || dropdownThree.style.display === "") {
         dropdownThree.style.display = "flex";
         iconThree.src = './assets/images/desktop/dropdown__visible.svg'
+
+        dropdownOne.style.display = "none";
+        icon.src = './assets/images/desktop/dropdown__visibleoff.svg'
+
+        dropdownTwo.style.display = "none";
+        iconTwo.src = './assets/images/desktop/dropdown__visibleoff.svg'
+
+        
+        dropdownFour.style.display = "none";
+        iconFour.src = './assets/images/desktop/dropdown__visibleoff.svg'
+
     } else {
         dropdownThree.style.display = "none";
         iconThree.src = './assets/images/desktop/dropdown__visibleoff.svg'
@@ -209,13 +248,21 @@ iconThree.addEventListener("click", function () {
 })
 
 
-let dropdownFour = document.querySelector('.dropdown-menu__four');
-let iconFour = document.querySelector('.dropdown-icon__four');
 
 iconFour.addEventListener("click", function () {
-    if (dropdownFour.style.display === "none") {
+    if (dropdownFour.style.display === "none" || dropdownFour.style.display === "") {
         dropdownFour.style.display = "flex";
         iconFour.src = './assets/images/desktop/dropdown__visible.svg'
+
+        dropdownOne.style.display = "none";
+        icon.src = './assets/images/desktop/dropdown__visibleoff.svg'
+
+        dropdownTwo.style.display = "none";
+        iconTwo.src = './assets/images/desktop/dropdown__visibleoff.svg'
+
+        dropdownThree.style.display = "none";
+        iconThree.src = './assets/images/desktop/dropdown__visibleoff.svg'
+
     } else {
         dropdownFour.style.display = "none";
         iconFour.src = './assets/images/desktop/dropdown__visibleoff.svg'
@@ -472,9 +519,6 @@ const myChartThree = new Chart(ctxThree, configThree);
 document.getElementById('blueThree').style.backgroundColor = myChartThree.data.datasets[0].backgroundColor;
 document.getElementById('greenThree').style.backgroundColor = myChartThree.data.datasets[1].backgroundColor;
 document.getElementById('redThree').style.backgroundColor = myChartThree.data.datasets[2].backgroundColor;
-
-
-
 
 function toggleDataThree(value) {
     const visibilityData = myChartThree.isDatasetVisible(value);

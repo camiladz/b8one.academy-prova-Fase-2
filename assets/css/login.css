@@ -139,11 +139,11 @@ fieldset {
     margin-top: 32px;
 }
 
-.erro {
+.input-email__erro {
+    display: none;
     color: #F03460;
     font-weight: 500;
     font-size: 12px;
-
 }
 
 input:invalid{

@@ -3,9 +3,7 @@ const init = () => {
   const inputPassword = document.querySelector('#input_password');
   const submitButton = document.querySelector('.login-enter')
 
- 
-    if(submitButton) {
-      if(submitButton) {
+
         submitButton.addEventListener('click', (event) => {
           event.preventDefault();
     
@@ -19,40 +17,20 @@ const init = () => {
             })
           }).then((response) => {
             return response.json();
-          }).then((data) => {
-            console.log(data)
+          }).then((data) => { 
+            const emailError = document.querySelector('.input-email__erro')
+            data === true ? window.location.href = "./index.html" : emailError.style.display = "block"
+            setTimeout(() => {
+                emailError.style.display = "none"
+              }, 2000)
           })
         }) 
       }
-    }
-}
+    
 
 window.onload = init;
- 
 
 
-
-
-
-
-
-//  /* -- validar email -- */
-//   function validateEmail() {
-//       var email = document.querySelector('.login-form__input');
-//       var erro = document.querySelector('.erro');
-
-//       if(!email.checkValidity()){
-//           erro.innerHTML = "Este e-mail não existe, você tem outro?";
-//       }
-
-//   }
-
-//   function changeMessage(){
-//       var erro = document.querySelector('.erro');
-//       if(erro.innerHTML == "Este e-mail não existe, você tem outro?"){
-//           erro.innerHTML = "";
-//       }
-//   }
 
 
  /* -- mostrar senha -- */

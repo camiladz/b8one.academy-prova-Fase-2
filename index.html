@@ -132,7 +132,7 @@
                     </div>
                     <div class="user-actions__profile">
                         <img class="user-actions-profile__avatar" src="./assets/images/desktop/profile-image.png"
-                            alt="Profile Avatar">
+                            alt="Profile Avatar" referrerpolicy="no-referrer">
                         <div class="user__menu">
                             <div class="user__container">
                                 <span class="user__name">
@@ -150,7 +150,7 @@
                             </div>
                         </div>
                         <span class="user-actions-profile__name">
-                            
+
                         </span>
                     </div>
                 </div>
@@ -487,9 +487,9 @@
                         <div class="general-report__tab">
                             <ul class="general-report__list">
                                 <li class="general-report__item">
-                                <button class="reportlink active" onclick="openTab(event, 'sales')" >
-                                    Vendas
-                                </button>
+                                    <button class="reportlink active" onclick="openTab(event, 'sales')">
+                                        Vendas
+                                    </button>
                                 </li>
                                 <li class="general-report__item">
                                     <button class="reportlink" onclick="openTab(event, 'orders')">
@@ -522,15 +522,15 @@
                                         stroke-linejoin="round" />
                                     <path d="M24 16V18.6667" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round"
                                         stroke-linejoin="round" />
-                                    <path d="M24 29.3333L24 32" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
+                                    <path d="M24 29.3333L24 32" stroke="#425DC7" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                                 <div class="revenue-card__title">
                                     <span class="card__title">
                                         Faturamento
                                     </span>
                                     <span class="card__text--revenue">
-                                        
+
                                     </span>
                                 </div>
                             </div>
@@ -548,15 +548,15 @@
                                         stroke-linejoin="round" />
                                     <path d="M24 16V18.6667" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round"
                                         stroke-linejoin="round" />
-                                    <path d="M24 29.3333L24 32" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
+                                    <path d="M24 29.3333L24 32" stroke="#425DC7" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                                 <div class="sales-card__title">
                                     <span class="card__title">
                                         Vendas totais
                                     </span>
                                     <span class="card__text--sales">
-                                       
+
                                     </span>
                                 </div>
                             </div>
@@ -574,15 +574,15 @@
                                         stroke-linejoin="round" />
                                     <path d="M24 16V18.6667" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round"
                                         stroke-linejoin="round" />
-                                    <path d="M24 29.3333L24 32" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
+                                    <path d="M24 29.3333L24 32" stroke="#425DC7" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                                 <div class="ticket-card__title">
                                     <span class="card__title">
                                         Ticket médio
                                     </span>
                                     <span class="card__text--ticket">
-                                        
+
                                     </span>
                                 </div>
                             </div>
@@ -595,13 +595,13 @@
                                 <button id="blue" onclick="toggleData(0)" class="legend-button">
                                 </button>
                                 <span class="legend-text">Estornado</span>
-    
+
                                 <button id="red" onclick="toggleData(1)" class="legend-button"></button>
                                 <span class="legend-text">Cancelado</span>
-    
+
                                 <button id="yellow" onclick="toggleData(2)" class="legend-button"></button>
                                 <span class="legend-text">Não pago</span>
-    
+
                                 <button id="green" onclick="toggleData(3)" class="legend-button"></button>
                                 <span class="legend-text">Pago</span>
                             </div>
@@ -611,18 +611,18 @@
                     </div>
                     <!-- Gráfico de Pedidos -->
                     <div class="general-report__orders tabcontent" id="orders">
-                            <div class="general-report__graph--orders">
-                                <div class="orders">
-                                    <canvas id="myChartTwo" width="1084" height="291"></canvas>
-                                </div>
-                                <div class="legend-box">
-                                    <button id="blueTwo" onclick="toggleDataTwo(0)" class="legend-button">
-                                    </button>
-                                    <span class="legend-text">
-                                        Total de Pedidos
-                                    </span>
-                                </div>
+                        <div class="general-report__graph--orders">
+                            <div class="orders">
+                                <canvas id="myChartTwo" width="1084" height="291"></canvas>
                             </div>
+                            <div class="legend-box">
+                                <button id="blueTwo" onclick="toggleDataTwo(0)" class="legend-button">
+                                </button>
+                                <span class="legend-text">
+                                    Total de Pedidos
+                                </span>
+                            </div>
+                        </div>
                     </div>
                     <!-- Gráfico de Revendedores -->
                     <div class="general-report__resellers tabcontent" id="resellers">
@@ -642,27 +642,31 @@
                                 </div>
                                 <div class="general-report__graph--resellers">
                                     <div class="resellers">
-                                        <canvas id="myChartThree" width="680" height="259"></canvas>
+                                        <canvas id="myChartThree" ></canvas>
                                     </div>
                                     <div class="legend-box">
                                         <button id="blueThree" onclick="toggleDataThree(0)" class="legend-button">
                                         </button>
                                         <span class="legend-text">Valor total de vendas</span>
-                                        <button id="greenThree" onclick="toggleDataThree(1)" class="legend-button"></button>
+                                        <button id="greenThree" onclick="toggleDataThree(1)"
+                                            class="legend-button"></button>
                                         <span class="legend-text">Quantidade de pedidos</span>
-        
-                                        <button id="redThree" onclick="toggleDataThree(2)" class="legend-button"></button>
+
+                                        <button id="redThree" onclick="toggleDataThree(2)"
+                                            class="legend-button"></button>
                                         <span class="legend-text">Comissão a pagar</span>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Ranking de vendedores -->
                             <div class="general-report__resellers--ranking">
                                 <div class="resellers__ranking">
                                     <span class="resellers__title">
-                                        Ranking de revendedores
+                                        🏆 Ranking de revendedores
                                     </span>
                                     <div class="ranking-position">
-                                        <ul class="position__list">                                        
+                                        <ul class="position__list">
+
                                         </ul>
                                     </div>
                                     <div class="position__button">
@@ -700,8 +704,8 @@
                         <hr id="insight__line">
                         <div class="insights__product">
                             <ul class="insights-product__list">
-    
-    
+
+
                             </ul>
                         </div>
                         <div class="insights__buttons">
