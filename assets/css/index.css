@@ -15,6 +15,46 @@
     background: #142159;
 }
 
+.hamburguer {
+    margin-right: 16px;
+    display: none;
+}
+  
+  .hamburguer__action {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    padding: 6px 4px;
+  }
+  
+  .hamburguer__item {
+    display: block;
+    width: 16px;
+    height: 1px;
+    background-color: #FFFFFF;
+    margin: 4px 0;
+
+  }
+  
+  .hamburguer__item:before,
+  .hamburguer__item:after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    display: block;
+    width: calc(100% - 8px);
+    height: 1px;
+    background-color: #FFFFFF;
+  }
+  
+  .hamburguer__item:before {
+    top: 6px;
+  }
+  
+  .hamburguer__item:after {
+    bottom: 6px;
+  }
+
 .header-container {
     width: 100%;
     max-width: 1440px;
@@ -22,6 +62,14 @@
     align-items: center;
     justify-content: space-between;
 }
+
+.header__block--left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -41,6 +89,7 @@
     line-height: 16px;
     color: #425DC7;
 }
+
 .logo__text{
     margin-left: 12px;
     font-weight: 500;
@@ -64,6 +113,7 @@
 .user-actions-alert__link{
     position: relative;
 }
+
 .user-actions-alert__notification{
     position: absolute;
     background: #F03460;
@@ -78,6 +128,7 @@
     display: flex;
     align-items: center;
 }
+
 .user-actions-profile__name{
     font-weight: 500;
     font-size: 14px;
@@ -86,7 +137,8 @@
     margin-left: 12px;
 }
 
-/* ---- interações ---- */
+/* ---- Interações ---- */
+
 
 .user-actions__help:hover .help__menu{
     position: absolute;
@@ -96,6 +148,7 @@
     transition: all 0.3s ease-in-out;
 }
 
+/* ---- Interação ajuda ----*/
 .help__menu {
     display: none;
     width: 200px;
@@ -105,16 +158,22 @@
     background: #FFFFFF;
 }
 
-
-
 .help__container {
     padding: 24px;
+}
+
+.help__vector {
+    display: flex;
+    position: absolute;
+    top: -8px;
+    left: 90px;
 }
 
 .help__text {
     display: flex;
     flex-direction: column;
 }
+
 .help__text--black {
     font-weight: 500;
     font-size: 14px;
@@ -133,6 +192,8 @@
     margin-top: 20px;
 }
 
+/* ---- Interações Admin ----*/
+
 .user-actions__alert:hover .notification__hubly {
     position: absolute;
     display: block;
@@ -149,6 +210,13 @@
     border-radius: 8px;
     width: 340px;
     height: 409px;
+}
+
+.notification__vector {
+    display: flex;
+    position: absolute;
+    top: -8px;
+    left: 158px;
 }
 
 .notification-content{
@@ -341,12 +409,21 @@ hr {
     margin-left: 32px;
 }
 
+/* ---- Interações User ---- */
+
 .user-actions__profile:hover .user__menu{
     position: absolute;
     display: block;
     left: 0px;
     top: 40px;
     transition: all 0.3s ease-in-out;
+}
+
+.user__vector {
+    display: flex;
+    position: absolute;
+    top: -8px;
+    left: 100px;
 }
 
 .user__menu{
@@ -389,6 +466,7 @@ hr {
 
 /* ---- fim interações ---- */
 
+/* ---- main ---- */ 
 
 main {
     display: flex;
@@ -407,7 +485,7 @@ main {
     margin: 16px 32px 32px 32px;
 }
 
-/* -- sidebar -- */
+/* ---- Sidebar ---- */
 .sidebar {
     max-width: 244px;
     width: 100%;
@@ -453,7 +531,7 @@ main {
 
 }
 
-/* -- dropdown -- */
+/* ---- Dropdown ---- */
 .dropdown-menu__one,
 .dropdown-menu__two,
 .dropdown-menu__three,
@@ -525,7 +603,6 @@ main {
     padding: 24px 16px 16px 16px;
 }
 
-
 .upgrade__description {
     font-weight: 500;
     font-size: 14px;
@@ -555,8 +632,9 @@ main {
     transition: all 0.3s ease-in-out;
 }
 
-/* -- main content -- */ 
+/* ---- main content ---- */ 
 
+/* --- banner ---- */
 .banner {
     display: flex;
     align-items: center;
@@ -609,7 +687,7 @@ b {
     transition: all 0.3s ease-in-out;
 }
 
-/* Data summary */
+/* ---- Resumo de Dados ---- */
 
 .data__summary {
     display: flex;
@@ -644,9 +722,13 @@ b {
     margin-right: 8px;
 }
 
-.data-summary__button:hover{
+.data-summary__button--arrow{
     display: flex;
     align-items: center;
+    gap: 10px;
+}
+
+.data-summary__button:hover{
     color: #425DC7;
     border: 2px solid #425DC7;
     transition: all 0.3s ease-in-out;
@@ -657,6 +739,11 @@ b {
     color: #FFFFFF;
 }
 
+.data-summary__button--blue:hover {
+    background: #FFFFFF;
+    color: #425DC7;
+
+}
 
 .data-summary__text {
     font-weight: 400;
@@ -670,7 +757,7 @@ b {
     color: #425DC7;
 }
 
-/* -- General report -- */ 
+/* ---- Relatório Geral  ---- */ 
 
 .general__report{
     display: block;
@@ -783,6 +870,8 @@ hr {
     color: #333333;
 }
 
+
+/* ---- Tab de Vendas ---- */
 .general-report__sales {
     max-width: 1084px;
     width: 100%;
@@ -792,6 +881,12 @@ hr {
     margin-bottom: 32px;
 }
 
+#myChart {
+    width: 1084px; 
+    height: 196px;
+}
+
+/* ---- Tab de Pedidos ---- */
 .general-report__orders{
     display: none;
     max-width: 1084px;
@@ -802,13 +897,15 @@ hr {
     border-radius: 8px;
     margin-bottom: 32px;
 }
-.orders{
+
+.orders__graph{  
     max-width: 1084px;
     width: 100%;
     height: 291px;
     margin-top: 48px;
 }
 
+/* ---- Tab de Revendedores ---- */
 .general-report__resellers{
     display: none;
     justify-content: space-between;
@@ -819,6 +916,13 @@ hr {
 }
 
 #myChartThree {
+    max-width: 680px;
+    width: 100%;
+    height: 259px;
+}
+
+.resellers__graph{
+    display: flex;
     max-width: 680px;
     width: 100%;
     height: 259px;
@@ -966,13 +1070,6 @@ hr {
     margin: 24px 0 24px 190px
 }
 
-.resellers{
-    display: flex;
-    max-width: 680px;
-    width: 100%;
-    height: 259px;
-}
-
 .resellers-button {
     max-width: 280px;
     width: 100%;
@@ -1007,6 +1104,7 @@ hr {
     display: block;
 
 }
+
 .legend-box {
     display: flex;
     max-width: 482px;
@@ -1015,7 +1113,7 @@ hr {
     margin-top: 12px;
     align-items: center;
 }
-
+/* ---- legenda e botões dos gráficos ----*/
 .legend-button{
     display: flex;
     align-items: center;
@@ -1073,12 +1171,18 @@ hr {
 }
 
 .insights-card__title--two {
-    margin-left: 48px;
+    margin-left: 60px;
 }
 
-.insights-card__title--three,
+.insights-card__title--three{
+    margin-left: 36px;
+    margin-bottom: 11px;
+    width: 96px;
+    max-width: 100%;
+}
+
 .insights-card__title--four {
-    margin-left: 16px;
+    margin-left: 20px;
     margin-bottom: 11px;
     width: 96px;
     max-width: 100%;
@@ -1088,7 +1192,6 @@ hr {
     display: flex;
 
 }
-
 
 .insights-product__item {
     display: flex;
@@ -1154,7 +1257,6 @@ hr {
     align-items: center;
     width: 368px;
 }
-
 
 .insights-product__index {
     max-width: 24px;
@@ -1267,11 +1369,7 @@ hr {
     margin-bottom: 4px;
 }
 
-#myChart {
-    width: 1084px; 
-    height: 196px;
-}
-
+/* ---- Media Screen ----*/
 
 @media screen and (max-width: 768px) {
     .header{
@@ -1280,6 +1378,11 @@ hr {
         height: 48px;
     }
 
+    .hamburguer {
+        margin: 0;
+        display: flex;
+    }
+      
     .header-container {
     width: 100%;
     padding: 8px 16px;
@@ -1289,13 +1392,19 @@ hr {
 
     .logo {
         width: 160px;
+        margin: 0;
     }
 
+    .header__block--right{
+        margin: 0;
+    }
+    
     .user-actions {
         width: 112px;
         gap: 16px;
 
     }
+
     .user-actions-profile__name{
         display: none;
     }
@@ -1303,6 +1412,7 @@ hr {
     .sidebar {
         display: none;
     }
+
     .main-container{
         width: 100%;
         margin: 0;
@@ -1416,7 +1526,7 @@ hr {
         flex-direction: column;
     }
 
-    /* -- insights **/ 
+    /* ---- insights ---- */ 
 
     .insights{
         padding: 16px;

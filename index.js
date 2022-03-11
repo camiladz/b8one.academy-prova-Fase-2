@@ -153,17 +153,6 @@ async function main() {
 
 main(); 
 
-
-
-
-
-
-
-
-
-
-
-
 /* ---- dropdown menu ---- */
 
 let dropdownOne = document.querySelector('.dropdown-menu__one');
@@ -201,8 +190,6 @@ icon.addEventListener("click", function () {
 });
 
 
-
-
 iconTwo.addEventListener("click", function () {
     if (dropdownTwo.style.display === "none" || dropdownTwo.style.display === "") {
         dropdownTwo.style.display = "flex";
@@ -222,9 +209,6 @@ iconTwo.addEventListener("click", function () {
         iconTwo.src = './assets/images/desktop/dropdown__visibleoff.svg'
     }
 })
-
-
-
 
 iconThree.addEventListener("click", function () {
     if (dropdownThree.style.display === "none" || dropdownThree.style.display === "") {
@@ -246,8 +230,6 @@ iconThree.addEventListener("click", function () {
         iconThree.src = './assets/images/desktop/dropdown__visibleoff.svg'
     }
 })
-
-
 
 iconFour.addEventListener("click", function () {
     if (dropdownFour.style.display === "none" || dropdownFour.style.display === "") {
@@ -272,7 +254,7 @@ iconFour.addEventListener("click", function () {
 
 /* ---- tab de mudança de gráfico ---- */
 
-function openTab(evt, tabName) {
+function openTab(evt, tabName, tab) {
     var i, tabcontent, reportlink;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -282,7 +264,7 @@ function openTab(evt, tabName) {
     for (i = 0; i < reportlink.length; i++) {
         reportlink[i].className = reportlink[i].className.replace(" active", "");
     }
-    document.getElementById(tabName).style.display = "block";
+    document.getElementById(tabName, tab).style.display = "block";
     evt.currentTarget.className += " active";
   }
 

@@ -22,7 +22,7 @@ const init = () => {
             data === true ? window.location.href = "./index.html" : emailError.style.display = "block"
             setTimeout(() => {
                 emailError.style.display = "none"
-              }, 2000)
+              }, 5000)
           })
         }) 
       }
