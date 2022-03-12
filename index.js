@@ -117,7 +117,7 @@ async function populateSales() {
 
 }
 
-/* ---- Inserindo dados da API no menu ---- */ 
+/* ---- Inserindo dados da API no menuUser ---- */ 
 async function fetchUser() {
     const response = await fetch("https://test-final.b8one.academy/user");
     const responseJson = await response.json();
@@ -268,9 +268,7 @@ function openTab(evt, tabName, tab) {
     evt.currentTarget.className += " active";
   }
 
-
 /* ---- gráfico de vendas ---- */
-// vendas
 const ctx = document.getElementById('myChart');
 
 const labels = [
