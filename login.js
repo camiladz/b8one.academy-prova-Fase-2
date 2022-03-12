@@ -1,3 +1,5 @@
+/* ---- validação de login e senha ----- */
+
 const init = () => {
   const inputEmail = document.querySelector('#input_email');
   const inputPassword = document.querySelector('#input_password');
@@ -33,17 +35,17 @@ window.onload = init;
 
 
 
- /* -- mostrar senha -- */
- let mostrarSenha = document.querySelector('.login-form__input--pass');
- let icon = document.querySelector('.visible__button');
+/* -- mostrar senha -- */
+let mostrarSenha = document.querySelector('.login-form__input--pass');
+let icon = document.querySelector('.visible__button');
 
-   icon.addEventListener("click", function(){
-        if(mostrarSenha.type == 'password'){
-            mostrarSenha.type ='text';
-            icon.src = 'assets/images/login/visible.svg';
+  icon.addEventListener("click", function(){
+      if(mostrarSenha.type == 'password'){
+          mostrarSenha.type ='text';
+          icon.src = 'assets/images/login/visible.svg';
         } else {
-            mostrarSenha.type = 'password';
-            icon.src = 'assets/images/login/visible-off.svg';
-        }
-    })
+          mostrarSenha.type = 'password';
+          icon.src = 'assets/images/login/visible-off.svg';
+      }
+  })
 

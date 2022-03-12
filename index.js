@@ -269,8 +269,6 @@ function openTab(evt, tabName, tab) {
   }
 
 
-
-
 /* ---- gráfico de vendas ---- */
 // vendas
 const ctx = document.getElementById('myChart');
@@ -430,7 +428,6 @@ function toggleDataTwo(value) {
     }
 }
 
-
 /* ---- gráfico de revendedores ---- */
 const ctxThree = document.getElementById('myChartThree');
 const labelsThree = [
@@ -511,3 +508,5 @@ function toggleDataThree(value) {
         myChartThree.show(value);
     }
 }
+
+
